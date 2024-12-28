@@ -1,0 +1,11 @@
+The correct usage of `calc()` in this case would be to remove the unnecessary `px` unit from the percentage value.  The corrected CSS code is shown below:
+
+```css
+.element {
+  width: calc(100% - 20px);
+  /* Correct usage of calc()*/
+  height: calc(50% - 10px); /*This will work correctly*/
+}
+```
+
+This revised version will accurately calculate the width as 20px less than 100% of the containing element's width.  The `px` unit after `100%` in this context is unnecessary and potentially problematic.
