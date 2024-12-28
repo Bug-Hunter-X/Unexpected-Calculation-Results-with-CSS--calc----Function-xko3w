@@ -1,0 +1,11 @@
+The following CSS code snippet demonstrates an issue where the `calc()` function is used incorrectly, leading to unexpected results:
+
+```css
+.element {
+  width: calc(100% - 20px);
+  /* Incorrect usage of calc() */
+  height: calc(50% - 10px); /*This will work correctly*/
+}
+```
+
+The problem is that the first `calc()` expression might not produce the expected result because the unit `px` after `100%` is unnecessary and may cause unexpected behavior across different browsers and rendering engines.  The percentage in the calculation should always be treated as a percentage of the containing element's width or height and doesn't require an explicit unit in such scenarios.
